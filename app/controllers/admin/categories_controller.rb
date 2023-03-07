@@ -9,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(product_params)
+    @category = Category.new(category_params)
 
     if @category.save
       redirect_to [:admin, :categories], notice: 'Category created!'
@@ -23,12 +23,4 @@ class Admin::CategoriesController < ApplicationController
       :name
     )
   end
-
-
-  # create_table "categories", force: :cascade do |t|
-  #   t.string "name"
-  #   t.datetime "created_at", precision: 6, null: false
-  #   t.datetime "updated_at", precision: 6, null: false
-  # end
-
 end
