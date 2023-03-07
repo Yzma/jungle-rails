@@ -34,3 +34,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 - Styling
   - Admin Dashboard
+- Details
+  - About Us
