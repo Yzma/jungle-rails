@@ -4,7 +4,22 @@
     <h1>Admin Dashboard</h1>
   </header>
 
-  <h4>Current Product Count: <%= @product_count %></h4>
-  <h4>Current Category Count: <%= @category_count %></h4>
-  
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h3 class="text-center">Product Count</h3>
+          <p><h4 class="text-center"><%= @product_count %></h4></p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h3 class="text-center">Category Count</h3>
+          <p><h4 class="text-center"><%= @category_count %></h4></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
