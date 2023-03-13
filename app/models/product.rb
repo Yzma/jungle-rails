@@ -4,6 +4,8 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  has_many :reviews
+
   validates :name, presence: true
   validates :price_cents, presence: true
   validates :quantity, presence: true
