@@ -22,6 +22,9 @@ CypressRails.hooks.before_server_start do
     quantity: 18,
     price: 24.99
   })
+
+  password = "valid_password"
+  user = User.create!(name: "Test Name", email: "uniqueemailaddress@uniqueemailaddress.com", password: password, password_confirmation: password)
 end
 
 CypressRails.hooks.after_transaction_start do
