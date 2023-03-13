@@ -21,6 +21,15 @@ end
 
 # Let's do this ...
 
+## USERS
+
+User.create!({
+  name: "First Last",
+  email: "test@test.com",
+  password: "password10",
+  password_confirmation: "password10"
+})
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
@@ -35,7 +44,7 @@ puts "Re-creating Products ..."
 
 Product.destroy_all
 
-cat1.products.create!({
+product1 = cat1.products.create!({
   name:  'Giant Tea',
   description: "The Giant Tea is an uncommon, medium-sized plant and can be found only in some tundras. It blooms twice a year, for 3 weeks.
   It has narrow, paired leaves, which are usually yellow-green. It also grows large flowers, which can be blue, bronze, light yellow, purple and light grey.
@@ -48,6 +57,18 @@ cat1.products.create!({
   image: open_asset('plante_1.jpg'),
   quantity: 0,
   price: 64.99
+})
+
+product1.reviews.create!({
+  user_id: 1,
+  description: "Description here",
+  rating: 4
+})
+
+product1.reviews.create!({
+  user_id: 1,
+  description: "Description here from user 1",
+  rating: 2
 })
 
 cat1.products.create!({
