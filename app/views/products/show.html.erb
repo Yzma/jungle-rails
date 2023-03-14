@@ -56,10 +56,14 @@
                         Rating: <%= i.rating %>
                       </p>
                     </div>
-                    <% if current_user && current_user.id==i.user.id %>
+                    <% if current_user && current_user.id == i.user.id %>
                       <div class="d-flex justify-content-between align-items-center">
                         <p class="small mb-0" style="color: #aaa;">
-                          <a href="#!" class="link-grey">Remove</a>
+                          <%= form_for [@product, @review], method: :delete do |f| %>
+                            <%= hidden_field_tag 'review_id', i.id  %>
+                            <a href="#!" class="link-grey">Remove</a>
+                            <%= f.submit %>
+                          <% end %>
                         </p>
                       </div>
                     <% end %>
