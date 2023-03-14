@@ -51,6 +51,11 @@
                         <%= time_ago_in_words(i.created_at) %> ago
                       </p>
                     </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <p class="small mb-0">
+                        Rating: <%= i.rating %>
+                      </p>
+                    </div>
                     <% if current_user && current_user.id==i.user.id %>
                       <div class="d-flex justify-content-between align-items-center">
                         <p class="small mb-0" style="color: #aaa;">
