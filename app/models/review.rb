@@ -1,14 +1,5 @@
 class Review < ApplicationRecord
 
-  # create_table "reviews", force: :cascade do |t|
-  #   t.integer "product_id"
-  #   t.integer "user_id"
-  #   t.text "description"
-  #   t.integer "rating"
-  #   t.datetime "created_at", precision: 6, null: false
-  #   t.datetime "updated_at", precision: 6, null: false
-  # end
-
   belongs_to :user
   belongs_to :product
 
