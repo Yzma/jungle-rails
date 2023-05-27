@@ -2,6 +2,13 @@
 
 A mini e-commerce application built with Ruby on Rails that allows visitors to view, purchase, and review products. Email receipts are sent upon a successful order that uses the Stripe API for secure transactions.
 
+## Dependencies
+
+- Rails 6.1 [Rails Guide](http://guides.rubyonrails.org/v6.1/)
+- Bootstrap 5
+- PostgreSQL 9.x
+- Stripe
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
@@ -23,9 +30,16 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
-## Dependencies
+## Media
 
-- Rails 6.1 [Rails Guide](http://guides.rubyonrails.org/v6.1/)
-- Bootstrap 5
-- PostgreSQL 9.x
-- Stripe
+### Main Page
+
+!["Main Page"](./screenshots/Main_page.gif)
+
+### Creating an Account
+
+!["Creating an Account"](./screenshots/Creating_account.gif)
+
+### Purchasing an item
+
+!["Purchasing an item"](./screenshots/Purchasing.gif)
